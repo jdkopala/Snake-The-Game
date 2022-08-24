@@ -25,6 +25,10 @@ while game_on:
   time.sleep(0.1)
   snek.move()
 
+  # Detect collision with food
+  if snek.head.distance(food) < 16:
+    food.refresh()
+
   # Detect collision with wall
   if snek.head.xcor() > 285 or snek.head.xcor() < -285 or snek.head.ycor() > 285 or snek.head.ycor() < -285:
     snek.reset_snake()
