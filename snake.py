@@ -41,6 +41,9 @@ class Snake:
       self.snake[seg_num].goto(new_x, new_y)
     self.head.forward(MOVE_DISTANCE)
 
+  def extend(self):
+    self.add_segment(self.snake[-1].position())
+
   def up(self):
     if self.head.heading() != DOWN:
       self.head.setheading(UP)
