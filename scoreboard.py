@@ -24,3 +24,11 @@ class Scoreboard(Turtle):
         self.score += 1
         self.clear()
         self.draw_scoreboard()
+
+    def reset_high_score(self):
+      if self.score > self.high_score:
+        self.high_score = self.score
+        with open('highscore.txt', mode='w') as high_score:
+          high_score.write(f"{self.high_score}")
+      self.score = 0
+      self.draw_scoreboard()
