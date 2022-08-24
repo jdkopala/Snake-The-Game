@@ -1,4 +1,4 @@
-#### Welcome to Snake!
+# Welcome to Snake!
 
 This is a simple clone of the classic Snake made with Python and it's built in graphics engine Turtle.
 
